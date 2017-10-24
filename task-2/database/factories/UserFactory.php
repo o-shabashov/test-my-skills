@@ -16,6 +16,6 @@ use Faker\Generator as Faker;
 $factory->define(App\User::class, function (Faker $faker) {
     return [
         'name'    => $faker->name,
-        'balance' => $faker->randomFloat(2),
+        'balance' => $faker->randomFloat(2, -config('database.max_user_balance'), config('database.max_user_balance')),
     ];
 });
