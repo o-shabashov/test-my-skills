@@ -117,4 +117,6 @@ return [
 
     ],
 
+    // TODO get `users`.`balance` column type and calculate maximum available value
+    'max_user_balance' => 99999999.99,
 ];
