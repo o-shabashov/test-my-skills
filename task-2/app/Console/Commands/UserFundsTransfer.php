@@ -40,7 +40,7 @@ class UserFundsTransfer extends Command
     {
         $sender    = User::findOrFail($this->argument('sender_id'));
         $recipient = User::findOrFail($this->argument('recipient_id'));
-        $amount    = (float)$this->argument('amount');
+        $amount    = round((float)$this->argument('amount'), 2, PHP_ROUND_HALF_DOWN);
 
         if ($amount <= 0) {
             $this->error('Something went wrong!');
