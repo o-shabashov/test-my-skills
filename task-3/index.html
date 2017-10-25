@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор суммы возврата долга</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="calculator">
+    <div class="container">
+        <form action="">
+            <h1>Калькулятор суммы возврата долга</h1>
+            <label for="loan">Сумма займа</label>
+            <select name="loan" v-model.number="loan" class="currency">
+                <option v-for="i in loans" v-bind:value="i">{{ i }}</option>
+            </select>
+
+            <label for="length">Количество дней</label>
+            <select name="length" v-model.number="length">
+                <option v-for="i in dates" v-bind:value="i">{{ i }}</option>
+            </select>
+        </form>
+        <div class="payment">{{ calcPayment }} ₽</div>
+        <div class="payment_date">{{ calcDate }}</div>
+    </div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+<script src='http://momentjs.com/downloads/moment-with-locales.min.js'></script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
