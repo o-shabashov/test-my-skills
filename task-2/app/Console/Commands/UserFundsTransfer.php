@@ -43,7 +43,6 @@ class UserFundsTransfer extends Command
         $amount    = round((float)$this->argument('amount'), 2, PHP_ROUND_HALF_DOWN);
 
         if ($amount <= 0) {
-            $this->error('Something went wrong!');
             throw new \Exception('Amount should be bigger than zero');
         }
 
