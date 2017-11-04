@@ -1,3 +1,21 @@
+CREATE TABLE `users` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `balance` DECIMAL(10, 2) NOT NULL,
+  PRIMARY KEY (`id`)
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
+
+CREATE TABLE `comments` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` INT(10) UNSIGNED NOT NULL,
+  `text` TEXT NOT NULL,
+  PRIMARY KEY (`id`)
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
+
 /* Для увеличения быстродействия можно добавить индекс на `comments`.`user_id` */
 ALTER TABLE `comments` ADD INDEX (`user_id`);
 
