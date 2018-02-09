@@ -26,5 +26,9 @@
 
 Необходимо создать веб-сервис для сохранения, просмотра и удаления резюме.
 
+## [[PHP] [Yii2] Сервис коротких ссылок](https://github.com/o-shabashov/test-my-skills/tree/master/PHP/Yii2/shorten-my-url)
+
+Веб-сервис для хранения коротких ссылок.
+
 ## [[JS] [Vue.js] Калькулятор задолженности](https://github.com/o-shabashov/test-my-skills/tree/master/JS/loan-calculator)
 
