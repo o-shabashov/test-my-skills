@@ -22,7 +22,7 @@
 Имеется аквариум с водой. Также имеется три разновидности рыб с различными
 характеристиками по десятибалльной шкале...
 
-## [[PHP] [Yii2] Накормить рыб в аквариуме](https://github.com/o-shabashov/test-my-skills/tree/master/PHP/Yii2/resume-skills)
+## [[PHP] [Yii2] Сервис резюме](https://github.com/o-shabashov/test-my-skills/tree/master/PHP/Yii2/resume-skills)
 
 Необходимо создать веб-сервис для сохранения, просмотра и удаления резюме.
 
