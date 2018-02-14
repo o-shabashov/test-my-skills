@@ -5,7 +5,7 @@
 * Clone repository
 
 ```bash
-git clone https://github.com/o-shabashov/shorten-my-url.git
+git clone https://github.com/o-shabashov/test-my-skills.git
 cd test-my-skills/PHP/No-framework/finance-transaction
 ```
 
