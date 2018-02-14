@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>XIAG test task</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
+    <style>
+        body { color: #5E5E5E; font: 13px normal Arial,Helvetica,sans-serif; } html, body, div, span, object, iframe, h1, h2, h3, h4, h5, p, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption { margin: 0; padding: 0;} .content { border: 1px solid silver; margin: 3em auto; width: 960px;} header { color: #174482; font-size: 26px; padding: 30px 20px 30px 100px;} table { background : #ECECEC; border : 1px solid silver; padding : 30px 20px 30px 100px;; color : #5E5E5E; width : 100%; text-align : left;}  table td {width : 50%; white-space : nowrap;}  th { text-align : left;}  input {font-size : 16px;}  footer {padding : 0.5em; color : #5E5E5E;}
+    </style>
+    <style>
+        #mpiv-bar { position:fixed;z-index:2147483647;left:0;right:0;top:0;transform:scaleY(0);-webkit-transform:scaleY(0);transform-origin:top;-webkit-transform-origin:top;transition:transform 500ms ease 1000ms;-webkit-transition:-webkit-transform 500ms ease 1000ms;text-align:center;font-family:sans-serif;font-size:15px;font-weight:bold;background:rgba(0, 0, 0, 0.6);color:white;padding:4px 10px; }	#mpiv-bar.mpiv-show { transform:scaleY(1);-webkit-transform:scaleY(1); }	#mpiv-popup.mpiv-show { display:inline; }	#mpiv-popup { display:none;border:1px solid gray;box-sizing:content-box;background-color:white;position:fixed;z-index:2147483647;margin:0;max-width:none;max-height:none;will-change:display,width,height,left,top;cursor:none; }	.mpiv-loading:not(.mpiv-preloading) * { cursor:wait!important; }	.mpiv-edge #mpiv-popup { cursor:default; }	.mpiv-error * { cursor:not-allowed!important; }	.mpiv-ready *, .mpiv-large * { cursor:zoom-in!important; cursor:-webkit-zoom-in!important; }	.mpiv-shift * { cursor:default!important; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <header>URL shortener</header>
+    <form id="form" method="post" action="short.php">
+        <table>
+            <tbody><tr>
+                <th>Long URL</th>
+                <th>Short URL</th>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <input type="url" required name="url">
+                    </label>
+                    <input type="submit" value="Do!">
+                </td>
+                <td id="result"></td>
+            </tr>
+            </tbody></table>
+    </form>
+</div>
+
+<script>
+  $(function () {
+    var form = $('#form');
+    $(form).submit(function (event) {
+      event.preventDefault();
+
+      $.ajax({
+        type   : "POST",
+        url    : $(form).attr('action'),
+        data   : $(form).serialize(),
+        success: function (data) {
+          $('#result').html(data);
+        }
+      });
+
+    });
+  });
+</script>
+
+</body></html>
