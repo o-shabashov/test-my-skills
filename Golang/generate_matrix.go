@@ -1,9 +1,9 @@
 package main
 
 import (
-    "fmt"
-    "math/rand"
-    "time"
+	"fmt"
+	"math/rand"
+	"time"
 )
 
 type UniqueRandomNumbers struct {
@@ -13,6 +13,7 @@ type UniqueRandomNumbers struct {
 func main() {
     var matrix [2][2]int
     generated := UniqueRandomNumbers{generated: make(map[int]bool)}
+	rand.Seed(time.Now().UTC().UnixNano())
 
     for i := 0; i < 2; i++ {
         for j := 0; j < 2; j++ {
@@ -25,7 +26,6 @@ func main() {
 }
 
 func generateUniqueNumber(urn *UniqueRandomNumbers) int {
-    rand.Seed(time.Now().UTC().UnixNano())
     for {
         randomNumber := rand.Int()
         if !urn.generated[randomNumber] {
