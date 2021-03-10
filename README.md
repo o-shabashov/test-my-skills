@@ -36,4 +36,4 @@
 
 ## [[JS] [Vue.js] Калькулятор задолженности](https://github.com/o-shabashov/test-my-skills/tree/master/JS/loan-calculator)
 
-## [[Golang] [Golang] Заполнить матрицу 2x2 случайными уникальными числами](https://github.com/o-shabashov/test-my-skills/blob/master/Golang/generate_matrix.go)
+## [[Golang] Заполнить матрицу 2x2 случайными уникальными числами](https://github.com/o-shabashov/test-my-skills/blob/master/Golang/generate_matrix.go)
